@@ -1,6 +1,5 @@
 import React,{ Component } from 'react';
-import { GuestList } from './GuestList';
-import { Analysis } from './Analysis';
+import { Practice } from './Practice'
 import './party.css'
 
 const API = 'http://localhost:3000/guests'
@@ -19,8 +18,7 @@ export class Party extends Component{
   render(){
     return(
       <div className='main'>
-        <Analysis />
-        <GuestList guests={this.state.guests}/>
+          <Practice guests={this.state.guests}/>
       </div>
     )
   }
