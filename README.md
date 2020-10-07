@@ -33,7 +33,7 @@ Solution found in the warmup-solution branch
 
 3) Remove Derek using the filter method and return an array
 
-***hint*** - use the premade `this.printGuest()` function 
+***hint*** - use the premade `this.printGuests()` function 
 
 ## Main
 ![Party](solution.png)
