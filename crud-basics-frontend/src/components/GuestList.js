@@ -42,7 +42,6 @@ export class GuestList extends Component{
       key={guest.id} 
       guest={guest} 
       update={this.updateToggle} 
-      delete={this.props.removeGuest}
       />
     })
   }
@@ -56,25 +55,14 @@ export class GuestList extends Component{
     })
   }
 
-  payload=()=>{
-    let {name,age,sex,VIP} = this.state.guestInfo
-    age = parseInt(age)
-    VIP = !!parseInt(VIP)
-    return {name,age,sex,VIP}
-  }
+
 
   handleAddSubmit=()=>{
-    this.props.addGuest(this.payload())
-    this.setState({
-      show: false,
-      guestInfo: guestInit
-    })
+    //submit to add guest
   }
 
   handleUpdateSubmit=()=>{
-    const {id} = this.state.guestInfo
-    this.props.updateGuest(id, this.payload())
-    this.setState({show:false})
+    //submit to update guest
   }
 
   render(){
@@ -83,7 +71,6 @@ export class GuestList extends Component{
       guest:this.state.guestInfo,
       handleChange:this.handleChange,
     }
-    console.log(this.payload())
     return(
     <div className="guest-list">
         <h2>Guest List 
